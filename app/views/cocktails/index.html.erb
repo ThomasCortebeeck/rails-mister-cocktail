@@ -1,7 +1,19 @@
-<h1>All our Cocktails</h1>
-<% @cocktails.each do |cocktail|%>
-<h2><%= cocktail.name %></h2> 
-<p><%= link_to "link to #{cocktail.name}", cocktail_path(cocktail) %></p> 
-<% end %>
-<p><%= link_to "+ Add cocktail", new_cocktail_path %></p>
+<div class="home-banner">
+	<h1>All our Cocktails</h1>
+	<% @cocktails.each do |cocktail|%>
+	<h2><%= cocktail.name %></h2> 
+	<p><%= link_to "link to #{cocktail.name}", cocktail_path(cocktail) %></p> 
+	<% end %>
+	<p><%= link_to "+ Add cocktail", new_cocktail_path %></p>
+</div>
+
+<div class="container">
+  <div class="row">
+    <div class="col-sm-6 col-sm-offset-3">
+      <%= "Lorem ipsum dolor sit amet, consectetur adipisicing elit " * 100 %>
+    </div>
+  </div>
+</div>
+
+
 
