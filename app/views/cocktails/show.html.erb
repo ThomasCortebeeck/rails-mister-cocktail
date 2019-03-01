@@ -1,0 +1,17 @@
+<h1> More info on <%= @cocktail.name %></h1>
+<%= link_to "View all cocktails", cocktails_path %>
+
+<ul>
+	<% @cocktail.doses.each do |dose| %>
+	<li><%= dose.ingredient.name %> <%= dose.description %>
+		<%= link_to "delete", cocktail_dose_path(@cocktail.id, dose.id), method: :delete %>
+	</li>
+	<% end %>
+</ul>
+
+
+
+
+<!-- cocktail.doses.create(description: "frrw2" , ingredient: Ingredient.all.sample )
+cocktail.ingredients
+cocktail.doses.first.ingredient.name -->
